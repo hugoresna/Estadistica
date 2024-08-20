@@ -1,0 +1,11 @@
+Lesson 5 SQL
+1.
+SELECT * FROM north_american_cities where country like "Canada"; 
+2.
+SELECT * FROM north_american_cities where country = "United States" Order by Latitude Desc; 
+3.
+SELECT * FROM north_american_cities where longitude < -87.6298 order by longitude asc; 
+4.
+SELECT * FROM north_american_cities where country = "Mexico" order by population desc limit 2; 
+5.
+SELECT * FROM north_american_cities where country = "United States" order by population desc limit 2 offset 2;
