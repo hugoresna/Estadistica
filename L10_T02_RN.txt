@@ -1,0 +1,9 @@
+LESSON 10 SQLBOLT
+
+1.    SELECT max(Years_employed) FROM employees;
+
+2.    SELECT avg(Years_employed), role FROM employees
+	Group By Role;
+
+3.    SELECT *, sum(years_employed) as AñosTrabajados FROM employees
+	Group By building;
