@@ -1,0 +1,62 @@
+#######################################################################################################################################
+# Teoría
+
+1. 
+#--------------------------------------------------------------------------------------------------------------------------------------
+B)
+
+2. 
+#--------------------------------------------------------------------------------------------------------------------------------------
+A)
+
+3. 
+#--------------------------------------------------------------------------------------------------------------------------------------
+En la 1NF
+
+4. 
+#--------------------------------------------------------------------------------------------------------------------------------------
+En escencia son lo mismo, lo que cambia es el orden en el que se ejecutan. El Having se usa para filtrar después del group by.
+
+5.
+C)
+
+#######################################################################################################################################
+# Práctica
+
+1.
+
+```SQL
+-- poner solución debajo de este mensaje
+
+	SELECT AVG(calificacion) as promedio, nombre_materia FROM calificaciones
+	where calificacion is not null
+	GROUP by nombre_materia
+	ORDER by promedio DESC ;
+
+```
+
+2.
+
+```SQL
+-- poner solución debajo de este mensaje
+
+	SELECT DISTINCT CONCAT(nombre,' ', apellido) as nombre_completo from alumnos
+	inner join calificaciones on alumnos.expediente = calificaciones.expediente
+	WHERE calificacion is not NULL
+	order by apellido;
+
+
+
+```
+
+3.
+
+```SQL
+-- poner solución debajo de este mensaje
+
+	SELECT DISTINCT CONCAT(nombre,' ', apellido) as nombre_completo, max(calificacion) as calificacion_mas_alta from alumnos
+	INNER join calificaciones on alumnos.expediente = calificaciones.expediente
+	WHERE calificacion is not NULL
+	GROUP by nombre_completo;
+
+```
