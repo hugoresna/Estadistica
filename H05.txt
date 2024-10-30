@@ -1,0 +1,20 @@
+import os
+import pandas as pd
+import numpy as np
+
+path = r"C:\Users\hugoa\Downloads\archive"
+archivename = "AirPassengers.csv"
+abrido = os.path.join(path,archivename)
+
+df = pd.read_csv(abrido)
+
+window = int(input("ingresa la ventana que quieres que tenga para la media movil"))
+
+df["rolling"] = np.nan
+
+for i in range((window-1), len(df)):
+    listado = df.iloc[(i-window+1):i+1, 1]
+    df.iloc[i, 2] = listado.mean()
+
+
+df.head()
