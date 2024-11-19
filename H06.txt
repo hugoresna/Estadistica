@@ -1,0 +1,11 @@
+¿Qué es una red neuronal? Videos de Dot CSV
+Hugo Alejandro Reséndiz Nava  307922
+
+Las redes neuronales son como el cerebro mismo, intiuitivamente como las neuronas, estas neuronas artificiales reciben datos, los procesan mediante funciones matemáticas y da un resultado. 
+Funciona similar a un filtro que decide cuál información avanza y cuál no. Un ejemplo muy sencillo es decidir si tuvimos una gran noche o no, dependiendo de las variables, podemos tomar 2 para hacerlo demasiado sencillo, entonces cuando las dos se cumplan es que tuvimos una gran noche.
+Pero esto de tener solo una neurona no funciona tanto, lo que tenemos que hacer es conectar varias neuronas para asi crear una red. 
+Estas redes se conforman de capas, estas son la entrada, las ocultas y la salida. 
+En cada capa se hacen cosas distintas, y conforme el proceso avanza la red va aprendiendo a resolver problemas complejos.
+Podemos ir familiarizándonos con las redes neuronales usando el playground de tensor flow, en este sitio podremos ir resolviendo problemas de separación de puntos de dos colores distintos, usando diferentes funciones, diferente cantidad de neuronas en cada capa y diferente función de activación.
+La retropropagación es el método que hace que las redes neuronales aprendan. 
+Es un proceso en el cual se pondera el peso del error en cada “columna” de neuronas, y vamos viendo desde el final hasta el principio de la red neuronal, corrigiendo esos errores. Este método es muy eficiente porque se va retrocediendo un paso a la vez, en comparación con su contraparte que es hacerlo todo aleatorio, o sea usar la fuerza bruta, lo que me recuerda a algunos proyectos de algoritmos genéticos, en especial el mío… En fin, el backpropagation es como un bucle con step -1, que mejora la red poco a poco.
